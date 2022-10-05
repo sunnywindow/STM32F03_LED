@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Yang HaiDong, ChongQingjiaotong, LIC=14HV2-94CG1-EVH1R-KV691-D8AH1-CAFP6
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TARMSTM.DLL V1.67.1.0
+ 
+<h2>Project:</h2>
+F:\LED\C\LED.uvprojx
+Project File Date:  10/05/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+LED.c(2): warning: // comments are not allowed in this language [-Wcomment]
+//----------------APB2使<C4><DC>时<D6>蛹拇<E6><C6><F7> ---------------------
+^
+LED.c(16): warning: no previous prototype for function 'Delay' [-Wmissing-prototypes]
+ void Delay()
+      ^
+LED.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+ void Delay()
+ ^
+ static 
+LED.c(16): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+ void Delay()
+           ^
+LED.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOA_ODR&=~(1<<5);             //PA5<B5>偷<E7>平,<D2><F2>为<CA><C7><D6><C3>0<A3><AC><CB><F9><D2><D4><D3>冒<B4>位<D3><EB>
+                         ~~^~~~~~~
+LED.c(47): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOB_ODR&=~(1<<9);             //PB9<B5>偷<E7>平,<D2><F2>为<CA><C7><D6><C3>0<A3><AC><CB><F9><D2><D4><D3>冒<B4>位<D3><EB>
+                         ~~^~~~~~~
+LED.c(55): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOC_ODR&=~(1<<13);            //PC13<B5>偷<E7>平,<D2><F2>为<CA><C7><D6><C3>0<A3><AC><CB><F9><D2><D4><D3>冒<B4>位<D3><EB>
+                         ~~^~~~~~~~
+6 warnings generated.
+compiling LED.c...
+linking...
+Program Size: Code=1004 RO-data=320 RW-data=0 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\LED.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.2.0.pack
+                Keil.STM32F1xx_DFP.2.2.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103ZE
+  ./RTE/_Target_1
+  C:/Users/DELL/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/DELL/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.2.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/startup_stm32f10x_hd.s
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
